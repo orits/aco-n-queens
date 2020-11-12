@@ -23,7 +23,7 @@ The c'tor receives the following arguments:
 
 class AntforNQueen(object) :
     def __init__(self, dim = 8, Nant = 1, Niter = 1000, rho = 0.05, alpha = 1, beta = 1.5, seed = None):
-        self.Queens = func.initializeNQuenNode(dim)
+        self.Queens = func.initialize_n_queen_node(dim)
         self.dim = dim
         self.Nant = Nant
         self.Niter = Niter
@@ -162,7 +162,7 @@ class AntforNQueen(object) :
             pos = ant.path[-1]
             x = pos[0]
             y = pos[1]
-            filterValues = ant.filterValues(x, y)
+            filterValues = ant.filter_values(x, y)
             queen_s = ant.previous_queen
             
             if len(filterValues) != 0 :
