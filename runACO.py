@@ -6,7 +6,7 @@ Created on Sat Jan 25 15:00:45 2020
 """
 
 import sys
-from ACO import AntforNQueen
+from ACO import AntForNQueen
 
 
 if __name__ == "__main__":
@@ -16,11 +16,11 @@ if __name__ == "__main__":
     
     sys.stdout = f            # output write to the file directly.
           
-    Niter = 100               # number of legal iteration to find a solution.
-    Nant = 200                # number of ants every iteration.
-    number_of_queens = 64     # number of queens to search.
+    n_iter = 100              # number of legal iteration to find a solution.
+    n_ant = 200               # number of ants every iteration.
+    n_queens = 64             # number of queens to search.
     
-    ant_colony = AntforNQueen(number_of_queens, Nant, Niter, rho=0.05, alpha=1, beta=1.5)
+    ant_colony = AntForNQueen(n_queens, n_ant, n_iter, rho=0.05, alpha=1, beta=1.5)
     ant_colony.run()
     
     sys.stdout = orig_stdout
